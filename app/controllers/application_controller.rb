@@ -16,10 +16,10 @@ class ApplicationController < Sinatra::Base
     if @user
       session[:user_id] = @user.id
       # binding.pry
-      redirect :'/account'
+      redirect '/account'
     else
       binding.pry
-      redirect :'/error'
+      redirect '/error'
     end
   end
 
@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     if @user
       erb :account
     else
-      redirect :'/error'
+      erb :'/error'
     end
   end
 
