@@ -8,8 +8,9 @@
   <body id="page-top">
 
     <% binding.pry %>
-    Welcome, <%= @user.username %>
-    <%= @user.balance %>
+    <% if Helpers.is_logged_in?(session) %>
+    Welcome, <%= Helpers.current_user.username %>
+    Your balance is: $<%= Helpers.current_user.balance %>
 
     <a href="/logout">Log Out</a>
 
