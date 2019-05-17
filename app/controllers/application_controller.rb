@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
       # binding.pry
       redirect :'/account'
     else
-      redirect '/error'
+      redirect :'/error'
     end
   end
 
@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
     if @user
       erb :account
     else
-      redirect '/error'
+      redirect :'/error'
     end
   end
 
