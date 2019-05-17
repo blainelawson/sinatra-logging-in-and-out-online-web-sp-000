@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
       # binding.pry
       redirect :'/account'
     else
+      binding.pry
       redirect :'/error'
     end
   end
